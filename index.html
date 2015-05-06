@@ -34,8 +34,11 @@
 
         if (eventName) {
           MP.api.retention(eventName, propName, dateRange).done(function(results) {
-            console.log(results.values());
-
+            eventGraph.MPChart('setData', results);
+            eventTable.MPTable(
+              'setData', results,
+              firstColHeader: 'Button clicked / city'
+              );
           });
         }
       };
