@@ -36,9 +36,9 @@
           MP.api.retention(eventName, propName, dateRange).done(function(results) {
             eventGraph.MPChart('setData', results);
             eventTable.MPTable(
-              'setData', results,
+              'setData', results {
               firstColHeader: 'Button clicked / city'
-              );
+              });
           });
         }
       };
