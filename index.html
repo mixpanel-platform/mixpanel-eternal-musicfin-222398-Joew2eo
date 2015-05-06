@@ -34,8 +34,8 @@
 
         if (eventName) {
           MP.api.retention(eventName, propName, dateRange).done(function(results) {
-            eventGraph.MPChart('setData', results);
-            eventTable.MPTable('setData', results);
+            console.log(results.values());
+
           });
         }
       };
