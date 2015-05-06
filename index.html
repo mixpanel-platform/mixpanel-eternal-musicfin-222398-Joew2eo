@@ -35,10 +35,7 @@
         if (eventName) {
           MP.api.retention(eventName, propName, dateRange).done(function(results) {
             eventGraph.MPChart('setData', results);
-            eventTable.MPTable(
-              'setData', results {
-              firstColHeader: 'Button clicked / city'
-              });
+            eventTable.MPTable('setData', results);
           });
         }
       };
