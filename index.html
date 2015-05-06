@@ -28,12 +28,12 @@
       });
 
       var runQuery = function() {
-        var eventName = "Song Played",
+        var eventName = eventSelect.MPEventSelect('value'),
             propName  = propSelect.MPPropertySelect('value'),
             dateRange = dateSelect.MPDatepicker('value');
 
         if (eventName) {
-          MP.api.segment(eventName, propName, dateRange).done(function(results) {
+          MP.api.retention(eventName, propName, dateRange).done(function(results) {
             eventGraph.MPChart('setData', results);
             eventTable.MPTable('setData', results);
           });
